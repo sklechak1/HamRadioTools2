@@ -33,7 +33,7 @@
 
     <TextView
         android:id="@+id/callLogged"
-        android:layout_width="125dp"
+        android:layout_width="153dp"
         android:layout_height="43dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="12dp"
@@ -61,7 +61,7 @@
     <TextView
         android:id="@+id/txtViewDisplayDate"
         android:layout_width="175dp"
-        android:layout_height="43dp"
+        android:layout_height="49dp"
         android:layout_marginStart="44dp"
         android:layout_marginTop="36dp"
         android:textColor="@android:color/background_light"

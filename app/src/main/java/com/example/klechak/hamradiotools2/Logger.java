@@ -98,7 +98,7 @@ public class Logger extends AppCompatActivity {
         outputString = curDate + " " + callsign + " " + stringFreq + " " + stringPower + " Watts " + stringMode + " " + stringComments + "\n";
         FileOutputStream callFO = null;
         try {
-            callFO = openFileOutput(FILE_NAME, MODE_PRIVATE);
+            callFO = openFileOutput(FILE_NAME, MODE_APPEND);
             callFO.write(outputString.getBytes());
             // NOTE TO ME - 11/19/2018 - I need to add .clear to the fields once everthing sucessfully saves
             // txtPower.getText().clear();
