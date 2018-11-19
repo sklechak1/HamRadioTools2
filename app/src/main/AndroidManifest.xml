@@ -22,7 +22,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Logger"></activity>
+        <activity android:name=".Logger" />
+        <activity android:name=".Viewer"></activity>
     </application>
 
 </manifest>

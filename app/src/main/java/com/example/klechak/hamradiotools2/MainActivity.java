@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private RequestQueue mQueue;
 
     private Button btn_to_logger;
+    private Button btn_to_viewlog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,14 @@ public class MainActivity extends AppCompatActivity {
 
         mTextViewResult = findViewById(R.id.text_view_result);
         Button buttonParse = findViewById(R.id.button_parse);
+
+        btn_to_viewlog = (Button) findViewById(R.id.btn_to_viewlog);
+        btn_to_viewlog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Viewer();  // send to the method below.  11/18/2018.
+            }
+        });
 
 
 //        EditText newcall = (EditText) findViewById(R.id.enterCall_Txt);
@@ -169,6 +178,11 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("callsign", callsign);
 //        String callsign = callsign.getText().toString;   // NOTE, eventually i'll implement the importing of the city and state and other json data SK 11/18/2018 1330.
 //        intent.putExtra("callsign", callsign);
+        startActivity(intent);
+    }
+    public void Viewer() {
+
+        Intent intent = new Intent(this, Viewer.class);
         startActivity(intent);
     }
 }

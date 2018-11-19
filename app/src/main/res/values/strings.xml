@@ -15,5 +15,6 @@
     <string name="modebtnFM">FM</string>
     <string name="txtPower">Operating Power</string>
     <string name="txtComments">(Optional) Comments</string>
+    <string name="txtLogBook">LOGBOOK</string>
 
 </resources>
