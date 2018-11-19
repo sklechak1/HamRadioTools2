@@ -13,11 +13,13 @@ import java.io.InputStreamReader;
 
 public class Viewer extends AppCompatActivity {
     private static final String FILE_NAME = "log.txt";
-    private TextView logView;
+    private TextView txtlogView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_viewer);
+
+       txtlogView = findViewById(R.id.txtViewLog);
 
         FileInputStream callFI = null;
         try {
@@ -31,7 +33,7 @@ public class Viewer extends AppCompatActivity {
                 stringBuild.append(text).append("\n");
             }
 
-           logView.setText(stringBuild.toString());
+           txtlogView.setText(stringBuild.toString());
 
 
         } catch (FileNotFoundException e) {
