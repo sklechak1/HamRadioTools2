@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">HamRadioTools</string>
+
+    <string name="callsignHint">Callsign</string>
+    <string name="btn_to_logger">Log Contact</string>
+    <string name="btn_to_viewlog">View Log</string>
+    <string name="loggerTitle">Logging Contact With</string>
+    <string name="txtViewDate">Date of Contact: </string>
+    <string name="txtViewfreq">Freqency:</string>
+    <string name="etxtFreq">Enter Frequency</string>
+    <string name="btnSubmitLog">Submit to Log</string>
+    <string name="modebtnUSB">USB</string>
+    <string name="modebtnLSB">LSB</string>
+    <string name="modebtnAM">AM</string>
+    <string name="modebtnFM">FM</string>
+
+
+
+</resources>
