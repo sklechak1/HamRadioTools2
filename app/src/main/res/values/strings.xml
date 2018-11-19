@@ -13,7 +13,7 @@
     <string name="modebtnLSB">LSB</string>
     <string name="modebtnAM">AM</string>
     <string name="modebtnFM">FM</string>
-
-
+    <string name="txtPower">Operating Power</string>
+    <string name="txtComments">(Optional) Comments</string>
 
 </resources>

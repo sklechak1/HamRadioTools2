@@ -49,8 +49,8 @@
     <TextView
         android:id="@+id/txtViewDate"
         android:layout_width="131dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="8dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="36dp"
         android:text="@string/txtViewDate"
         android:textColor="@android:color/background_light"
@@ -60,35 +60,32 @@
 
     <TextView
         android:id="@+id/txtViewDisplayDate"
-        android:layout_width="201dp"
-        android:layout_height="31dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="175dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="44dp"
         android:layout_marginTop="36dp"
-        android:layout_marginEnd="24dp"
         android:textColor="@android:color/background_light"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.166"
         app:layout_constraintStart_toEndOf="@+id/txtViewDate"
         app:layout_constraintTop_toBottomOf="@+id/callLogged" />
 
     <EditText
-        android:id="@+id/etxtFreq"
-        android:layout_width="147dp"
-        android:layout_height="48dp"
+        android:id="@+id/txtFreq"
+        android:layout_width="171dp"
+        android:layout_height="56dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="104dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="4dp"
         android:ems="10"
         android:hint="@string/etxtFreq"
         android:inputType="numberDecimal"
-        android:textAlignment="viewStart"
+        android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textColorHint="@android:color/background_light"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.888"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtViewDate" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/rgMode"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewDisplayDate" />
 
     <Button
         android:id="@+id/btnSubmitLog"
@@ -101,22 +98,26 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
- <RadioGroup
+
+    <RadioGroup
+        android:id="@+id/rgMode"
         android:layout_width="114dp"
         android:layout_height="107dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
+        android:checkedButton="@+id/modebtnAM"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.047"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxtFreq">
+        app:layout_constraintTop_toBottomOf="@+id/txtViewDate">
 
         <RadioButton
             android:id="@+id/modebtnUSB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:checked="true"
             android:text="@string/modebtnUSB"
             android:textColor="@android:color/background_light" />
 
@@ -145,6 +146,41 @@
             android:textColor="@android:color/background_light" />
     </RadioGroup>
 
-   
+    <EditText
+        android:id="@+id/txtPower"
+        android:layout_width="163dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/txtPower"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/background_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/rgMode"
+        app:layout_constraintTop_toBottomOf="@+id/txtFreq" />
+
+    <EditText
+        android:id="@+id/txtComments"
+        android:layout_width="226dp"
+        android:layout_height="69dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="56dp"
+        android:ems="10"
+        android:hint="@string/txtComments"
+        android:inputType="text|textPassword"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        android:textAlignment="center"
+        android:textColorHint="@android:color/background_light"
+        app:layout_constraintBottom_toTopOf="@+id/btnSubmitLog"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 
 </android.support.constraint.ConstraintLayout>
