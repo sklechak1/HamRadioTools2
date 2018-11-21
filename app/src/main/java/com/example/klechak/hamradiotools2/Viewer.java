@@ -2,6 +2,7 @@ package com.example.klechak.hamradiotools2;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.widget.TextView;
 
 import java.io.BufferedReader;
@@ -30,10 +31,11 @@ public class Viewer extends AppCompatActivity {
             String text;
 
             while ((text = br.readLine()) != null ){
-                stringBuild.append(text).append("\n");
+                stringBuild.append(text).append("\n\n");
             }
 
            txtlogView.setText(stringBuild.toString());
+            txtlogView.setMovementMethod(new ScrollingMovementMethod());
 
 
         } catch (FileNotFoundException e) {

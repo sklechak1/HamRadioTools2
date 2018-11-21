@@ -95,7 +95,8 @@ public class Logger extends AppCompatActivity {
             }
 
 
-        outputString = curDate + " " + callsign + " " + stringFreq + " " + stringPower + " Watts " + stringMode + " " + stringComments + "\n";
+        outputString = " - " + curDate + " " + callsign + " " + stringFreq + " " + stringPower + " Watts " + stringMode + " " + stringComments + "\n"; // i bet \n doesn't do anything Haha.
+
         FileOutputStream callFO = null;
         try {
             callFO = openFileOutput(FILE_NAME, MODE_APPEND);
