@@ -54,7 +54,7 @@ public class Logger extends AppCompatActivity {
 
 
         Button btnSubmitLog = findViewById(R.id.btnSubmitLog);
-
+//        String btnsubmit = btnSubmitLog.getText().toString();
 
         btnSubmitLog.setOnClickListener(new View.OnClickListener() {
             @Override
