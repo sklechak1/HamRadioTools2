@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">HamRadioTools</string>
 
-    <string name="callsignHint">Callsign</string>
+    <string name="callsignHint">  Enter a Callsign</string>
     <string name="btn_to_logger">Log Contact</string>
     <string name="btn_to_viewlog">View Log</string>
     <string name="loggerTitle">Logging Contact With</string>

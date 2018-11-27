@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,8 +22,8 @@ public class Logger extends AppCompatActivity {
     private TextView txtFreq;
     private TextView txtComments;
     private static final String FILE_NAME = "log.txt";
-
-
+    RadioGroup radioGroup;
+    RadioButton radioButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,7 +69,7 @@ public class Logger extends AppCompatActivity {
     }
 
     public void LogContact() {
-        final RadioGroup radGpMode = (RadioGroup) findViewById(R.id.rgMode);
+         radioGroup = findViewById(R.id.rgMode);
 
 
         Bundle bundle = getIntent().getExtras();
@@ -79,20 +80,25 @@ public class Logger extends AppCompatActivity {
         String stringFreq = txtFreq.getText().toString();
         String stringPower = txtPower.getText().toString();
         String stringComments = txtComments.getText().toString();
-        String stringMode;
         String outputString;
-        int selectedMode = radGpMode.getCheckedRadioButtonId();
-            if (selectedMode == 1){
-                stringMode = "USB";
-            }else if (selectedMode == 2){
-                stringMode = "LSB";
-            }else if (selectedMode == 3) {
-                stringMode = "AM";
-            }else if (selectedMode == 4) {
-                stringMode = "FM";
-            }else{
-                stringMode = "Unknown Mode";
-            }
+
+        int selectedMode = radioGroup.getCheckedRadioButtonId();
+            radioButton = findViewById(selectedMode);
+            String stringMode = radioButton.getText().toString();
+
+// 11/26 java.lang.IllegalStateException: Could not find method checkButton(View) in a parent or
+// ancestor Context for android:onClick attribute defined on view class android.support.v7.widget.AppCompatRadioButton with id 'modebtnLSB'
+//            if (selectedMode == 1){
+//                stringMode = "USB";
+//            }else if (selectedMode == 2){
+//                stringMode = "LSB";
+//            }else if (selectedMode == 3) {
+//                stringMode = "AM";
+//            }else if (selectedMode == 4) {
+//                stringMode = "FM";
+//            }else{
+//                stringMode = "Unknown Mode";
+//            }
 
 
         outputString = " - " + curDate + " " + callsign + " " + stringFreq + " " + stringPower + " Watts " + stringMode + " " + stringComments + "\n"; // i bet \n doesn't do anything Haha.

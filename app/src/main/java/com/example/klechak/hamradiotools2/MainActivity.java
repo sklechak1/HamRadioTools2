@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mTextViewResult = findViewById(R.id.text_view_result);
-        Button buttonParse = findViewById(R.id.button_parse);
+        ImageButton buttonParse = findViewById(R.id.button_parse);
 
         btn_to_viewlog = (Button) findViewById(R.id.btn_to_viewlog);
         btn_to_viewlog.setOnClickListener(new View.OnClickListener() {
