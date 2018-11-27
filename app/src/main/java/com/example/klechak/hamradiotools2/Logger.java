@@ -22,8 +22,10 @@ public class Logger extends AppCompatActivity {
     private TextView txtFreq;
     private TextView txtComments;
     private static final String FILE_NAME = "log.txt";
+
     RadioGroup radioGroup;
-    RadioButton radioButton;
+    String stringMode = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +61,8 @@ public class Logger extends AppCompatActivity {
 
         btnSubmitLog.setOnClickListener(new View.OnClickListener() {
             @Override
+
+
             public void onClick(View v) {
 
                 LogContact();
@@ -66,10 +70,40 @@ public class Logger extends AppCompatActivity {
 
             }
         });
+
+        final RadioGroup radioGroup = findViewById(R.id.rgMode);
+        radioGroup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int selectedMode = radioGroup.getCheckedRadioButtonId();
+                switch(selectedMode) {
+                    case R.id.modebtnUSB: {
+                        stringMode = "USB";
+                        break;
+                    }
+                    case R.id.modebtnLSB: {
+                        stringMode = "LSB";
+                        break;
+                    }
+                    case R.id.modebtnAM: {
+                        stringMode = "AM";
+                        break;
+                    }
+                    case R.id.modebtnFM: {
+                        stringMode = "FM";
+                        break;
+                    }
+                }
+
+
+            }
+
+        });
     }
 
+
     public void LogContact() {
-         radioGroup = findViewById(R.id.rgMode);
+
 
 
         Bundle bundle = getIntent().getExtras();
@@ -82,23 +116,7 @@ public class Logger extends AppCompatActivity {
         String stringComments = txtComments.getText().toString();
         String outputString;
 
-        int selectedMode = radioGroup.getCheckedRadioButtonId();
-            radioButton = findViewById(selectedMode);
-            String stringMode = radioButton.getText().toString();
 
-// 11/26 java.lang.IllegalStateException: Could not find method checkButton(View) in a parent or
-// ancestor Context for android:onClick attribute defined on view class android.support.v7.widget.AppCompatRadioButton with id 'modebtnLSB'
-//            if (selectedMode == 1){
-//                stringMode = "USB";
-//            }else if (selectedMode == 2){
-//                stringMode = "LSB";
-//            }else if (selectedMode == 3) {
-//                stringMode = "AM";
-//            }else if (selectedMode == 4) {
-//                stringMode = "FM";
-//            }else{
-//                stringMode = "Unknown Mode";
-//            }
 
 
         outputString = " - " + curDate + " " + callsign + " " + stringFreq + " " + stringPower + " Watts " + stringMode + " " + stringComments + "\n"; // i bet \n doesn't do anything Haha.
@@ -126,5 +144,6 @@ public class Logger extends AppCompatActivity {
 
 
     }
+
 
 }
