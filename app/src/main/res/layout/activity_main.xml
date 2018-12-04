@@ -59,26 +59,26 @@
         android:id="@+id/btn_to_logger"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="120dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toStartOf="@+id/btn_to_dxspots"
         android:text="@string/btn_to_logger" />
 
     <Button
         android:id="@+id/btn_to_viewlog"
-        android:layout_width="wrap_content"
+        android:layout_width="116dp"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/btn_to_dxspots"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="3dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="0dp"
         android:text="@string/btn_to_viewlog" />
 
     <Button
         android:id="@+id/btn_to_dxspots"
-        android:layout_width="95dp"
-        android:layout_height="51dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="17dp"

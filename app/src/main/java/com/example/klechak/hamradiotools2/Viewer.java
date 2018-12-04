@@ -13,7 +13,7 @@ import java.io.InputStreamReader;
 
 
 public class Viewer extends AppCompatActivity {
-    private static final String FILE_NAME = "log.txt";
+    private static final String FILE_NAME = "logs.txt";
     private TextView txtlogView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

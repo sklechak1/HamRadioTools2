@@ -30,15 +30,7 @@ public class DxSpots extends AppCompatActivity {
 
         @Override
         protected Void doInBackground(Void... voids) {
-//            try {
-//                Document doc = Jsoup.connect("http://www.emergencyclosingcenter.com/complete.html").get();
-//                Elements rows = doc.select("tr");
-//                for(Element row:rows){
-//                    Elements columns = row.select("td");
-//                    for(Element column:columns){
-//                        dataget = doc.text();
-//                    }
-//                }
+//
             TextView info = (TextView) findViewById(R.id.txt1);
             try {
                 Document doc = Jsoup.connect("https://www.qrz.com/dxcluster").get();
@@ -64,7 +56,8 @@ public class DxSpots extends AppCompatActivity {
 
                         }
                         System.out.println();
-                        info.setText(output.toString());
+//                        info.setText(output.toString());
+//                        info.setText("Hello");
 
 
                     }

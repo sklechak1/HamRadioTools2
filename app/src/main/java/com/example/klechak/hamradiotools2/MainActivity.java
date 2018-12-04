@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button btn_to_logger;
     private Button btn_to_viewlog;
+    private Button btn_to_dxspots;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +44,16 @@ public class MainActivity extends AppCompatActivity {
                 Viewer();  // send to the method below.  11/18/2018.
             }
         });
+
+        btn_to_dxspots = (Button) findViewById(R.id.btn_to_dxspots);
+        btn_to_dxspots.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DxSpots();
+            }
+
+        });
+
 
 
 //        EditText newcall = (EditText) findViewById(R.id.enterCall_Txt);
@@ -186,4 +197,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, Viewer.class);
         startActivity(intent);
     }
+    public void DxSpots() {
+
+        Intent intent = new Intent(this, DxSpots.class);
+        startActivity(intent);
+    }
 }
+
+

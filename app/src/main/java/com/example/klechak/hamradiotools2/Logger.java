@@ -21,7 +21,7 @@ public class Logger extends AppCompatActivity {
     private TextView txtPower;
     private TextView txtFreq;
     private TextView txtComments;
-    private static final String FILE_NAME = "log.txt";
+    private static final String FILE_NAME = "logs.txt";
 
     RadioGroup radioGroup;
     String stringMode = "";
@@ -119,7 +119,7 @@ public class Logger extends AppCompatActivity {
 
 
 
-        outputString = " - " + curDate + " " + callsign + " " + stringFreq + " " + stringPower + " Watts " + stringMode + " " + stringComments + "\n"; // i bet \n doesn't do anything Haha.
+        outputString = callsign + " - " + curDate + " - " +  " - " + stringFreq + " - " + stringPower + " Watts  - " + stringMode + " " + stringComments + "\n__________________________________________________\n"; // i bet \n doesn't do anything Haha.
 
         FileOutputStream callFO = null;
         try {
