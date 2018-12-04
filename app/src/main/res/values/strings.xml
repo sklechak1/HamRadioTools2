@@ -4,6 +4,7 @@
     <string name="callsignHint">  Enter a Callsign</string>
     <string name="btn_to_logger">Log Contact</string>
     <string name="btn_to_viewlog">View Log</string>
+    <string name="btn_to_dxspots">Dx Spots</string>
     <string name="loggerTitle">Logging Contact With</string>
     <string name="txtViewDate">Date of Contact: </string>
     <string name="txtViewfreq">Freqency:</string>
@@ -16,5 +17,6 @@
     <string name="txtPower">Operating Power</string>
     <string name="txtComments">(Optional) Comments</string>
     <string name="txtLogBook">LOGBOOK</string>
+    <string name="title_activity_dx_spots">DxSPots</string>
 
 </resources>

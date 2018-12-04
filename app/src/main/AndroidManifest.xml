@@ -23,7 +23,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".Logger" />
-        <activity android:name=".Viewer"></activity>
+        <activity android:name=".Viewer" />
+        <activity
+            android:name=".DxSPots"
+            android:label="@string/title_activity_dx_spots"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".DxSpots"></activity>
     </application>
 
 </manifest>
