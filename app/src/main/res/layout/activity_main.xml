@@ -86,13 +86,15 @@
 
     <ImageButton
         android:id="@+id/button_parse"
-        android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_width="26dp"
+        android:layout_height="24dp"
+        android:layout_alignEnd="@+id/enterCall_Txt"
         android:layout_alignTop="@+id/enterCall_Txt"
-        android:layout_marginStart="-48dp"
-        android:layout_marginTop="-1dp"
-        android:layout_toEndOf="@+id/enterCall_Txt"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="5dp"
+        android:adjustViewBounds="true"
         android:background="@null"
+        android:scaleType="fitXY"
         app:srcCompat="@drawable/smallsearch" />
 
 

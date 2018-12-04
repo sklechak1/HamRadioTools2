@@ -118,7 +118,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:checked="true"
-            android:onClick="checkButton"
+
             android:text="@string/modebtnUSB"
             android:textColor="@android:color/background_light" />
 
@@ -128,7 +128,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/modebtnLSB"
-            android:onClick="checkButton"
+
             android:textColor="@android:color/background_light" />
 
         <RadioButton
@@ -137,7 +137,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/modebtnAM"
-            android:onClick="checkButton"
+
             android:textColor="@android:color/background_light" />
 
         <RadioButton
@@ -146,7 +146,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/modebtnFM"
-            android:onClick="checkButton"
+
             android:textColor="@android:color/background_light" />
 
 
