@@ -3,6 +3,7 @@ package com.example.klechak.hamradiotools2;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.widget.TextView;
 
 import org.jsoup.Jsoup;
@@ -91,6 +92,7 @@ public class DxSpots extends AppCompatActivity {
         protected void onPostExecute(String s) {
             super.onPostExecute(s);
             info.setText(s);
+            info.setMovementMethod(new ScrollingMovementMethod());
 
 
         }
