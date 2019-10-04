@@ -114,12 +114,9 @@ public class Logger extends AppCompatActivity {
         String stringFreq = txtFreq.getText().toString();
         String stringPower = txtPower.getText().toString();
         String stringComments = txtComments.getText().toString();
-        String outputString;
 
+        String outputString= String.format("%s - %s - %s - %s Watts - %s %s\n__________________________________________________\n", callsign, curDate, stringFreq, stringPower, stringMode, stringComments) ;
 
-
-
-        outputString = callsign + " - " + curDate + " - " +  " - " + stringFreq + " - " + stringPower + " Watts  - " + stringMode + " " + stringComments + "\n__________________________________________________\n"; // i bet \n doesn't do anything Haha.
 
         FileOutputStream callFO = null;
         try {
